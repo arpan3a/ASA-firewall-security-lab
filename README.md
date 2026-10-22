@@ -137,22 +137,4 @@ The firewall denied unsolicited traffic from the DMZ and outside networks toward
 
 OSPF is enabled on both inside and outside transit networks as an educational exercise to demonstrate ASA OSPF participation. A common production design would keep the ISP outside the internal OSPF domain, use a static default route toward the ISP, originate a default route internally, and rely on NAT at the edge.
 
-Because the ISP currently learns private routes through OSPF, successful internet pings alone do not conclusively prove PAT. Packet Tracer also reports zero NAT hit counters in this build. PAT is configured, but stronger translation verification would require isolating the ISP from internal OSPF or using CML/ASAv.
-
-## Repository structure
-
-```text
-.
-├── README.md
-├── configurations/
-├── limitations/
-├── packet-tracer/
-├── security-policy/
-├── topology/
-├── troubleshooting/
-└── verification/
-```
-
-## Disclaimer
-
-This project is an educational Packet Tracer lab, not a production firewall template. Credentials and hashes are removed from published configuration files.
+Because the ISP currently learns private routes through OSPF, successful internet pings alone do not conclusively prove PAT. Packet Tracer also reports zero NAT hit counters in this build. PAT is configured, but stronger translation verification would require isolating the ISP from internal OSPF or using CML/ASAv. (Credentials and hashes are removed from published configuration files.)
