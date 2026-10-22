@@ -1,6 +1,6 @@
 # Cisco ASA 5506-X Firewall, OSPF, DHCP Relay, PAT and DMZ Security Lab
 
-![ASA lab topology](topology/asa-firewall-topology.svg)
+![ASA lab topology](topology/asa-firewall-topology.png)
 
 ## Overview
 
