@@ -115,18 +115,23 @@ interface GigabitEthernet0/1
 
 The ASA ACL permits the DMZ server's relay response to `10.10.10.2` before denying general DMZ-to-inside traffic.
 
-## Verification summary
+## Verification Evidence
 
-Confirmed behavior:
+### Permitted traffic
 
-- Inside clients obtained DHCP leases from the DMZ server.
-- Inside clients reached the DMZ DHCP and DNS servers.
-- Inside clients reached the simulated external server.
-- DMZ hosts reached their ASA DMZ gateway after a narrow ICMP exception.
-- Outside hosts could not initiate traffic toward the inside network.
-- ICMP inspection allowed legitimate echo replies.
+Inside clients successfully reached approved DMZ resources and the simulated external network.
 
-See [`verification/verification-checklist.md`](verification/verification-checklist.md) and the screenshots directory.
+![Permitted traffic verification](verification/screenshots/inside-to-dmz-and-outside-allowed.png)
+
+### Denied traffic
+
+The firewall denied unsolicited traffic from the DMZ and outside networks toward the trusted inside network.
+
+![DMZ to inside denied](verification/screenshots/dmz-to-inside-denied.png)
+
+![Outside to inside denied](verification/screenshots/outside-to-inside-denied.png)
+
+[View the complete verification checklist](verification/verification.md)
 
 ## Important design note
 
