@@ -10,9 +10,8 @@
 - [x] Inside client reached external host `8.8.8.8`.
 - [x] DMZ server reached ASA DMZ gateway `172.16.10.1`.
 - [x] Outside host could not initiate traffic to inside gateway.
-- [ ] Capture a correct DMZ-to-inside denial using `192.168.100.15`.
-- [ ] Add the final Packet Tracer `.pkt` file.
-- [ ] Optionally redesign external OSPF to validate PAT independently.
+- [x] Capture a correct DMZ-to-inside denial using `192.168.100.15`.
+- [x] Add the final Packet Tracer `.pkt` file.
 
 Suggested evidence commands:
 
